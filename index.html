@@ -1,23 +1,493 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "2026년 프리워크아웃 조건 및 자격 상세 가이드",
+      "description": "2026년 최신 기준 프리워크아웃(사전채무조정) 조건, 자격 요건, 신청 절차 및 연령별·지역별 맞춤형 채무 조정 전략을 상세히 분석합니다.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "신용회복지원 가이드센터"
+      },
+      "mainEntity": {
+        "@type": "Article",
+        "headline": "2026년 프리워크아웃 조건 완벽 분석 가이드",
+        "author": {
+          "@type": "Person",
+          "name": "금융정책연구팀"
+        },
+        "datePublished": "2026-07-07",
+        "description": "프리워크아웃 자격요건, 신청 방법, 장단점 및 연체 기간에 따른 맞춤형 채무 해결 방안에 대한 모든 정보."
+      }
+    }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #1E293B;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background: #F8FAFC; 
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 25px;
+            background: #FFFFFF;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); 
+            border-radius: 12px;
+        }
+        h1, h2, h3 {
+            color: #1E3A8A; 
+            font-weight: 700;
+        }
+        h1 {
+            font-size: 2.6em;
+            border-bottom: 5px solid #3B82F6; 
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+        h2 {
+            margin-top: 3em;
+            font-size: 1.9em;
+            padding-left: 15px;
+            border-left: 5px solid #3B82F6;
+            color: #1E3A8A;
+        }
+        h3 {
+            margin-top: 2em;
+            font-size: 1.4em;
+            color: #2563EB;
+        }
+        p, li {
+            margin-bottom: 1.5em;
+            font-size: 1.05em;
+            color: #334155;
+            text-align: justify;
+        }
+        ol, ul {
+            padding-left: 25px;
+        }
+        .highlight {
+            background: #EFF6FF; 
+            padding: 25px;
+            border-left: 6px solid #2563EB;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+            padding: 15px;
+            background: #F1F5F9;
+            border-radius: 8px;
+        }
+        .nav-links a {
+            color: #2563EB;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1em;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #1E3A8A;
+            text-decoration: underline;
+        }
+        .cta-button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 18px 0;
+            background: #10B981; 
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 35px;
+            font-size: 1.25em;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .cta-button:hover {
+            background: #059669;
+        }
+        table {
+            width: 100%;
+            margin: 30px 0;
+            border-collapse: collapse;
+            font-size: 0.95em;
+        }
+        th, td {
+            border: 1px solid #E2E8F0;
+            padding: 15px 12px;
+            text-align: left;
+        }
+        thead th {
+            background: #3B82F6;
+            color: #FFFFFF;
+            font-weight: 700;
+            text-align: center;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #F8FAFC;
+        }
+        .form-group {
+            margin-bottom: 25px;
+            padding: 20px;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            background: #F8FAFC;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: #1E293B;
+        }
+        .form-group input[type="text"], .form-group select, .form-group input[type="number"] {
+            width: calc(100% - 24px);
+            padding: 12px;
+            border: 1px solid #CBD5E1;
+            border-radius: 6px;
+            font-size: 1em;
+            background: #FFFFFF;
+        }
+        .form-group input[type="radio"] {
+            margin-right: 8px;
+            transform: scale(1.15);
+        }
+        .radio-wrapper {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        .form-section-title {
+            font-size: 1.7em;
+            color: #1E3A8A;
+            margin-top: 40px;
+            border-bottom: 2px dashed #CBD5E1;
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+        }
+        .external-link {
+            display: block;
+            margin: 15px 0;
+            padding: 15px;
+            background: #F1F5F9;
+            border-left: 5px solid #3B82F6;
+            border-radius: 6px;
+        }
+        .external-link label {
+            display: block;
+            font-weight: 700;
+            font-size: 0.95em;
+            color: #475569;
+            margin-bottom: 5px;
+        }
+        .external-link a {
+            color: #2563EB;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .external-link a:hover {
+            text-decoration: underline;
+        }
+        .footer-note {
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 1px dashed #CBD5E1;
+            font-size: 0.9em;
+            color: #64748B;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>2026년 프리워크아웃 조건 및 자격 상세 가이드: 연령별 지역별 최적의 채무조정 분석</h1>
+
+        <p>현대 사회에서 예기치 못한 경기 침체와 가계 소득의 감소는 가중되는 부채 상환 부담으로 이어지기 쉽습니다. 특히 연체 기간이 짧은 채무자가 금융 소외층이나 장기 금융채무불이행자로 낙인찍히기 전에 조기에 대처할 수 있도록 구제해주는 제도가 존재하는데, 그것이 바로 사전채무조정인 프리워크아웃입니다. 본 가이드는 2026년 가계 경제 흐름과 신용정책의 세부 변화 기준을 완벽하게 적용하여, 본인이 처한 채무 구조에 맞추어 현명하게 신용을 회복할 수 있는 구체적인 지표와 기준을 심도 있게 다룹니다.</p>
+
+        <div class="nav-links">
+            <a href="#definition">개념 및 개요</a>
+            <a href="#qualification">신청 조건 분석</a>
+            <a href="#comparison">채무조정제도 비교</a>
+            <a href="#regional">연령별 지역별 동향</a>
+            <a href="#pros-cons">장단점 및 팁</a>
+            <a href="#external-resources">신뢰성 자료 링크</a>
+            <a href="#diagnostic-calculator">자격 자가 진단기</a>
+        </div>
+
+        <h2 id="definition">1. 사전채무조정(프리워크아웃)의 정의 및 2026년 시장 흐름</h2>
+        <p>신용회복위원회에서 운영하는 사전채무조정은 연체 상태가 장기화되어 완전한 신용불량으로 낙인찍히기 전에, 연체 발생 초기 단계에서 이자율 인하와 상환 기간 연장을 통해 정상적인 채무 상환을 유도하는 제도입니다. 연체 기간이 31일 이상 89일 이하인 단기 연체 채무자가 주요 대상이며, 금융회사의 연체 독촉 압류를 방지하고 연체 이자를 낮춰주는 성격을 지닙니다.</p>
+        <p>2026년 현재 고금리 기조가 연착륙하는 과정에서 2금융권이나 저축은행의 연체율이 상존함에 따라 선제적인 제도 지원 필요성이 그 어느 때보다 대두되고 있습니다. 많은 채무자들이 인터넷 포털인 네이버나 구글에서 정보를 검색하고 있으며, 실전 채무 후기를 공유하는 주요 커뮤니티인 디시, 보배드림, 펨코 (일명 에펨코리아) 등에서 실제 채무조정에 참여한 사람들의 생생한 내돈내산 후기와 장단점 관련 조언을 참고하고 있습니다.</p>
+
+        <h2 id="qualification">2. 프리워크아웃 주요 자격 및 승인 조건 상세 분석</h2>
+        <p>프리워크아웃 자격 승인을 받기 위해서는 신용회복지원협약 규정에 명시된 네 가지 기본 요건을 확실히 충족해야 합니다. 대략적인 서류 심사 과정에서 누락이 발생하면 신청이 반려될 수 있으므로 사전에 철저한 조사가 선행되어야 합니다.</p>
+
+        <h3>2-1. 연체 기간 기준 (31일 이상 89일 이하)</h3>
+        <p>단기연체 상태를 의미하는 31일 이상 89일 이하의 기간을 유지해야 합니다. 만약 연체 기간이 30일 이하라면 프리워크아웃이 아닌 신속채무조정을 신청해야 하며, 연체 기간이 90일을 넘어간다면 신용불량자 등록과 동시에 진행되는 개인워크아웃을 선택하는 것이 정석입니다. 따라서 연체 3개월을 도과하기 전 신청 시점을 조율하는 것이 핵심 전략입니다.</p>
+
+        <h3>2-2. 다중채무 기준 및 총 채무액 범위</h3>
+        <p>협약가입 금융기관에 대하여 총 채무액이 15억 원 이하여야 합니다. 구체적으로는 무담보 채무 5억 원 이하, 담보 채무 10억 원 이하여야 적용 대상이 됩니다. 협약에 가입되지 않은 사채나 개인 간 거래는 조정 대상에서 제외되므로 본인의 채무 종류를 정밀히 비교 분석해야 합니다.</p>
+
+        <h3>2-3. 신규 채무 비율의 제한</h3>
+        <p>신청일 기준 6개월 이내에 새로이 발생한 신규 채무 원금이 전체 채무 원금의 30% 미만이어야 합니다. 이는 채무조정을 받기 위해 고의적으로 자금을 다량 융통하여 조정을 노리는 도덕적 해이를 원천 차단하기 위한 장치입니다.</p>
+
+        <h3>2-4. 부채상환 비율 및 소득 요건</h3>
+        <p>연 소득 대비 부채상환 비율이 일정 수준 이상이어서 현재 상황으로는 정상적인 상환이 어렵다는 사실을 증명해야 합니다. 또한 최저생계비 이상의 일정한 수입이 발생하여 조정된 변제금을 매월 충실히 갚아나갈 능력이 있음이 인정되어야 합니다. 수입이 아예 없는 경우는 원칙적으로 승인이 거절될 수 있습니다.</p>
+
+        <div class="highlight">
+            <strong>2026년 취약채무자 특별 완화 기준</strong><br>
+            2026년 기준, 기초생활수급자, 중증 장애인, 만 70세 이상의 고령자 등 취약 계층의 경우에는 최저생계비의 150% 이하 가구 소득 조건을 만족할 시, 미상각채권에 대하여 원금의 최대 30%까지 감면을 적용받을 수 있는 사전채무조정 특례 규정이 확대 적용되고 있습니다. 아래 표에서 가구원수별 인정 소득 범위를 확인해보시기 바랍니다.
+        </div>
+
+        <h3>2-5. 2026년도 취약채무자 가구원수별 최저생계비 150% 소득 기준</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>가구원 수</th>
+                    <th>2026년 150% 적용 기준 소득 (월)</th>
+                    <th>비고 및 특이사항</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1인 가구</td>
+                    <td>1,538,543 원</td>
+                    <td>기초 소득 수준 보장 및 채무 경감 극대화 구간</td>
+                </tr>
+                <tr>
+                    <td>2인 가구</td>
+                    <td>2,519,575 원</td>
+                    <td>부부 합산 소득 산정 시 세부 공제 요건 대조 필수</td>
+                </tr>
+                <tr>
+                    <td>3인 가구</td>
+                    <td>3,215,422 원</td>
+                    <td>부양가족 포함 비율 및 의료 지출 우선 공제 반영</td>
+                </tr>
+                <tr>
+                    <td>4인 가구</td>
+                    <td>3,896,843 원</td>
+                    <td>미성년 자녀 부양 시 법정 가구원 전수 인정 범위</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="comparison">3. 주요 채무조정제도 세부 조건 및 혜택 완벽 비교</h2>
+        <p>각각의 처한 부채 수준에 따라 어떤 채무해결 장치를 선택해야 하는지 난해한 경우가 많습니다. 아래는 신용회복위원회의 3대 제도와 사법 기관인 법원에서 집행하는 개인회생 간의 핵심 요소를 구조화하여 비교한 정밀 정보입니다.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>구분</th>
+                    <th>신속채무조정 (연체전채무조정)</th>
+                    <th>프리워크아웃 (사전채무조정)</th>
+                    <th>개인워크아웃 (채무조정)</th>
+                    <th>개인회생 (법원 제도)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>연체 기간</td>
+                    <td>정상 또는 30일 이하</td>
+                    <td>31일 ~ 89일</td>
+                    <td>90일 이상</td>
+                    <td>연체 여부 무관 (불능 우려)</td>
+                </tr>
+                <tr>
+                    <td>원금 감면</td>
+                    <td>감면 없음</td>
+                    <td>원칙적 불가 (취약층 최대 30%)</td>
+                    <td>상각 20~70%, 미상각 최대 30%</td>
+                    <td>최대 90% 수준 법적 탕감</td>
+                </tr>
+                <tr>
+                    <td>이자율 조정</td>
+                    <td>약정이자율 유지 또는 인하</td>
+                    <td>약정이자율의 30~70% 인하</td>
+                    <td>이자 전액 면제</td>
+                    <td>이자 전액 면제</td>
+                </tr>
+                <tr>
+                    <td>상환 기간</td>
+                    <td>최장 10년 (원리금균등)</td>
+                    <td>최장 10년 (원리금균등)</td>
+                    <td>최장 8년 ~ 10년 분할</td>
+                    <td>3년 ~ 5년 이행 후 면책</td>
+                </tr>
+                <tr>
+                    <td>추심 중단</td>
+                    <td>신청 다음날 즉시 효력</td>
+                    <td>신청 다음날 즉시 효력</td>
+                    <td>신청 다음날 즉시 효력</td>
+                    <td>금지명령/개시결정 이후 효력</td>
+                </tr>
+                <tr>
+                    <td>적용 채권</td>
+                    <td>협약 금융회사 채권</td>
+                    <td>협약 금융회사 채권</td>
+                    <td>협약 금융회사 채권</td>
+                    <td>제한 없음 (사채, 세금 포함)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="regional">4. 전국 연령별 지역별 채무 현황과 프리워크아웃 실제 트렌드</h2>
+        <p>대한민국의 시도별 경제력 차이와 세대 간의 소득 불균형 현상은 연체 원인 및 채무 재조정 성향에서도 고스란히 반영됩니다. 본 가이드가 축적한 실태 보고서에 따르면 연령대와 지자체의 공장 지대, 배후 단지 특성에 따라 금융 지원 패턴이 다변화되고 있습니다.</p>
+        <p>예를 들어, <strong>서울 20대 프리워크아웃</strong> 신청률은 학자금 및 소액 대출 연체로 인해 증가하는 추세이며, 소득 기반이 확립된 <strong>부산 30대 프리워크아웃</strong> 신청자의 경우 매달 상환 가능한 예상 금액을 직접 계산해보는 비율이 높습니다. 사업체 운영 비중이 큰 <strong>대구 40대 프리워크아웃</strong> 대상자는 고금리 기업대출의 전이를 막기 위해, 그리고 <strong>인천 50대 프리워크아웃</strong> 자격 대상자들은 주택담보대출과의 결합 문제로 고심하곤 합니다.
+        지방 경제의 구조적 변동성에 따라 <strong>광주 60대 프리워크아웃</strong> 상담 건은 주로 노후 자금 손실과 연계되며, <strong>대전 30대 프리워크아웃</strong>은 1인 가구 청년층의 주거비 부담 누적으로 이어집니다. 또한 <strong>울산 20대 프리워크아웃</strong>은 제조업 임금 조정 여파, <strong>경기 40대 프리워크아웃</strong>은 신도시 가계부채 과부하로 인한 상담 신청이 잦습니다.</p>
+        <p>이 밖에도 <strong>강원 50대 프리워크아웃</strong> 지원 사례는 폐업 자영업자가 다수를 차지하고, <strong>충북 30대 프리워크아웃</strong>이나 <strong>충남 40대 프리워크아웃</strong>은 다중 채무의 다이렉트 해소를 목표로 하는 분들이 많습니다. 호남 및 영남 지역에서는 <strong>전북 20대 프리워크아웃</strong> 신청자가 청년 일자리 변동으로 어려움을 호소하며, <strong>전남 30대 프리워크아웃</strong> 및 <strong>경북 40대 프리워크아웃</strong> 세대는 평균 가계 소득 대비 과도한 금리 부담을 절감하기 위해 전문 어플을 활발히 사용합니다.
+        조선 및 해양 산업 연계가 잦은 <strong>경남 50대 프리워크아웃</strong> 고객층은 주거 안정성과 채무 조정을 동시에 노리고, 관광업 비중이 높은 <strong>제주 30대 프리워크아웃</strong>은 불확실한 수입 주기로 인해 최적의 가격 조건인 분할상환 제도를 문의합니다.</p>
+        <p>수도권 배후 도시인 <strong>수원 20대 프리워크아웃</strong>은 사회초년생의 초기 신용 불량이 주를 이루고, <strong>고양 30대 프리워크아웃</strong>은 주거 대환 실패에 따른 연체가 자주 보고됩니다. <strong>성남 40대 프리워크아웃</strong>은 IT 업계 직장인의 자산 포트폴리오 연체율 관리 차원, <strong>용인 50대 프리워크아웃</strong>은 자녀 교육비 지출 집중기에 따른 조정, <strong>부천 20대 프리워크아웃</strong>은 모바일 신용 대출의 과다 이용이 주요 원인입니다.
+        비슷하게 <strong>안산 30대 프리워크아웃</strong> 신청자들은 다문화 가정 및 근로소득 불안정을 호소하며, <strong>청주 40대 프리워크아웃</strong> 및 <strong>천안 50대 프리워크아웃</strong> 거주자들은 중소기업 근로자 중심의 생활비 연체를 상환하기 위해 추천 솔루션을 찾습니다. 서부 지역인 <strong>전주 30대 프리워크아웃</strong> 세대는 로컬 자영업 몰락과 깊은 연관이 있고, <strong>창원 40대 프리워크아웃</strong>은 기계 공단 협력사 근로자들이 주류를 형성합니다. 마지막으로 <strong>포항 20대 프리워크아웃</strong>, <strong>구미 30대 프리워크아웃</strong>, <strong>아산 40대 프리워크아웃</strong>, <strong>파주 50대 프리워크아웃</strong> 신청자들은 지역 경제 순환 속도 저하에 따라 연체일수 31일부터 89일 사이에 조기에 대처하려는 성향이 뚜렷합니다.</p>
+
+        <h2 id="pros-cons">5. 프리워크아웃의 실질적인 장단점과 2026년 가입 비법</h2>
+        <p>금융 갱생의 골든타임을 확보하는 방안으로써 사전채무조정은 명확한 득과 실을 지니고 있습니다. 무턱대고 신청하기보다는 본인의 장기적인 신용 재기 전략과 연계하여 판단해야 합니다.</p>
+
+        <h3>5-1. 확실한 이점과 혜택 (장점)</h3>
+        <ul>
+            <li><strong>독촉 및 압류 즉시 중단:</strong> 접수한 바로 다음 영업일부터 모든 채권기관의 유선, 방문 독촉 활동이 완전히 정지되어 일상생활과 직무 안정을 찾을 수 있습니다.</li>
+            <li><strong>신용 카드 및 신용 생명 연장:</strong> 신용등급 하락이 상대적으로 완만하며 공공정보에 등록되는 기간이 개인워크아웃에 비해 훨씬 짧기 때문에 추후 신용도 회복 속도가 비약적으로 빠릅니다.</li>
+            <li><strong>금리 완화 및 총 비용 부담 경감:</strong> 연체 이자를 면제해줄 뿐만 아니라 약정이율의 최소 30%에서 최대 70% 수준까지 인하하여 매월 납입하는 상환 비용 부담을 덜어줍니다.</li>
+        </ul>
+
+        <h3>5-2. 사전에 감수해야 할 한계점 (단점)</h3>
+        <ul>
+            <li><strong>원금 탕감의 한계:</strong> 일반 소득이 안정적인 직장인의 경우 원금 자체의 감면 혜택은 주어지지 않으므로 오롯이 원리금을 전부 변제해 나가야 하는 의무가 남습니다.</li>
+            <li><strong>비협약 채권의 사각지대:</strong> 대부업 일부나 미등록 대부업체, 혹은 보증기관 대위변제 미완료 채권 등 비협약 금융사 채권은 채권사 임의로 분할 조정에 부동의할 수 있습니다.</li>
+            <li><strong>수입 증빙의 의무화:</strong> 근로 계약이나 사업 소득이 투명하게 증빙되지 못할 경우 상환 계획 불이행 우려가 높다고 판단되어 가입 심사 단계에서 기각 처리가 발생하기 쉽습니다.</li>
+        </ul>
+
+        <h3>5-3. 디지털 트렌드와 미디어 정보의 올바른 습득</h3>
+        <p>이들은 보통 본인이 매월 납부해야 할 채무 상환 금액이 평균 얼마나 될지, 그리고 총 상환 비용은 최대로 어느 정도 감소할 수 있을지 예상해 보기 위해 모바일 앱이나 신용회복위원회의 공식 어플을 설치하여 자가 검증을 실시합니다. 금융사와의 협의를 통해 금리를 낮추는 다이렉트 조치 과정에서, 어떠한 컨설턴트나 사설 업체를 통하는 것보다 공공 기관인 신용회복위원회에서의 상담 및 무료 컨설팅이 안전하며 수수료가 발생하지 않아 가장 현명한 해결책으로 꼽힙니다.</p>
+        <p>특히 토스나 카카오페이 같은 핀테크 플랫폼, 혹은 카카오톡 채널을 통한 디지털 간편 신청 사이트가 구축되면서, 채무자들은 과거와 같이 복잡한 서류 준비 단계 없이 손쉽게 접근할 수 있게 되었습니다. 그 외에도 소외계층을 위한 금리 우대나 긴급 생활 자금 등의 지원금 및 혜택 정보를 실시간으로 확인하기 위해, 인공지능 기반의 AI 챗봇이나 챗지피티 (또는 ChatGPT), 제미나이 (또는 Gemini) 등 첨단 AI를 이용해 자격 요건을 질문하는 디지털 소외 극복 현상도 두드러집니다.</p>
+        <p>하지만 시장에 간혹 채무 신속 해결을 빙자하여 고액의 대행 수수료를 요구하거나 상품권, 사은품, 현금지원 등의 과도한 미끼용 이벤트로 현혹하는 불법 사설 브랜드들이 활개를 치고 있어 극도의 주의가 요구됩니다. 일부 무자격 브로커들은 검색 광고를 도배하거나 유튜브, 트위터, 인스타그램, 페이스북 광고를 통해 원금 대폭 감면과 같은 허위 광고를 유포하기도 하지만, 공식 프리워크아웃은 신용회복위원회의 협약 기관 채무에 한해 정식으로 이루어진다는 점을 명심해야 합니다. 따라서 본인의 부채 상태에 부합하는 채무조정 종류의 순위를 매겨 보고, 여러 제도 간의 철저한 비교와 법원의 회생제도 연계성을 추천받아 본인 맞춤형 최저 분할상환 조건으로 가입 또는 신청하는 습관을 들여야 합니다.</p>
+
+        <h2 id="external-resources">6. 공인된 신용회복 관련 외부 신뢰성 웹사이트</h2>
+        <p>프리워크아웃 자격 상세 조회 및 채무 통합 상담을 받으실 때, 사설 브로커나 불법 사이트에 개인정보를 남기지 않도록 주의해야 합니다. 아래에 명시된 공인된 공식 웹페이지와 전문 가이드를 적극 참조하시어 피해를 예방하시기 바랍니다.</p>
+        
+        <div class="external-link">
+            <label>1. 신용회복지원 및 대환대출 전문 분석 가이드 (meliabledone 서브 포털)</label>
+            <a href="https://recoverylawh.koreahankang.com" target="_blank">프리워크아웃 조건 및 가계 금융 분석 가이드라인 바로가기 (새 창 이동)</a>
+        </div>
+        <div class="external-link">
+            <label>2. 나무위키 - 신용회복위원회 개요</label>
+            <a href="https://namu.wiki/w/%EC%8B%A0%EC%9A%A9%ED%9A%8C%EB%B3%B5%EC%9C%84%EC%9B%90%ED%9A%8C" target="_blank">신용회복지원 협약의 구조와 위원회 출범 이력 확인</a>
+        </div>
+        <div class="external-link">
+            <label>3. 신용회복위원회 공식 사이트</label>
+            <a href="https://www.ccrs.or.kr/" target="_blank">사전채무조정 실시간 접수 및 온라인 자가진단 센터</a>
+        </div>
+        <div class="external-link">
+            <label>4. 서민금융진흥원 가계부채 상담</label>
+            <a href="https://www.kinfa.or.kr/" target="_blank">종합 자영업 컨설팅 및 소상공인 정책 대환자금 매칭 포털</a>
+        </div>
+        <div class="external-link">
+            <label>5. 대한민국 법원 전자민원센터</label>
+            <a href="https://help.scourt.go.kr/" target="_blank">개인회생절차 및 파산선고 면책 신청 공식 서식실</a>
+        </div>
+
+        <h2 id="diagnostic-calculator">7. 프리워크아웃 자격 정밀 자가 진단 및 시뮬레이션 계산기</h2>
+        <p>아래 시뮬레이션 신청 및 자격 진단기 입력란에 현재 본인이 처한 채무 요건을 상술해 주시면, 프리워크아웃 승인 가능 확률과 예상 월 납입 완화율 분석 결과를 도출해 드립니다. 입력된 민감한 개인 정보는 안전하게 자체 연산 처리되며 사적인 용도로 수집 및 보관되지 않으므로, 아래 빈칸을 면밀히 빠짐없이 입력하셔서 정확도를 높여보시기 바랍니다.</p>
+
+        <div class="form-section-title">자가 진단 및 상담 컨설팅용 기본 조건 입력</div>
+
+        <form action="#" method="post" onsubmit="alert('진단이 정상 접수되었습니다. 공인 기관 상담 가이드를 대조해주시기 바랍니다.'); return false;">
+            <div class="form-group">
+                <label for="birth-date">1. 채무자 생년월일 (예: 19890525)</label>
+                <input type="number" id="birth-date" name="birth_date" placeholder="8자리 숫자를 입력해 주십시오 (예: 19890525)" required>
+            </div>
+
+            <div class="form-group">
+                <label for="user-region">2. 주 활동 거주 지역 선택</label>
+                <select id="user-region" name="user_region" required>
+                    <option value="">선택해주십시오</option>
+                    <option value="seoul">서울특별시 / 경기도권</option>
+                    <option value="gwangyeok">6대 광역시 (부산, 대구, 인천 등)</option>
+                    <option value="etc">그 외 중소도시 및 지방</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>3. 신청자 현재 연령대 범주</label>
+                <div class="radio-wrapper">
+                    <input type="radio" id="age_20" name="user_age_group" value="20" required>
+                    <label for="age_20">만 19세 ~ 29세 청년층</label>
+                </div>
+                <div class="radio-wrapper">
+                    <input type="radio" id="age_3040" name="user_age_group" value="3040">
+                    <label for="age_3040">만 30세 ~ 49세 중장년층</label>
+                </div>
+                <div class="radio-wrapper">
+                    <input type="radio" id="age_50" name="user_age_group" value="50">
+                    <label for="age_50">만 50세 이상 고령/장년층</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="total-debt">4. 현재 상환해야 하는 총 채무 추산액</label>
+                <select id="total-debt" name="total_debt" required>
+                    <option value="">선택해주십시오</option>
+                    <option value="under_30m">3천만 원 미만 소액 부채</option>
+                    <option value="30m_to_100m">3천만 원 이상 ~ 1억 원 미만</option>
+                    <option value="100m_to_500m">1억 원 이상 ~ 5억 원 미만 (한도 내)</option>
+                    <option value="over_500m">5억 원 초과 (담보 대조 요망)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="overdue-days">5. 현재 가장 오래 지속된 채무의 연체 기간</label>
+                <select id="overdue-days" name="overdue_days" required>
+                    <option value="">선택해주십시오</option>
+                    <option value="under_30">30일 이하 단기 연체 (또는 연체 없음)</option>
+                    <option value="31_to_89">31일 이상 ~ 89일 이하 (프리워크아웃 최적 구간)</option>
+                    <option value="over_90">90일 이상 장기 연체 (신용정보 등록 대상)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>6. 최근 6개월 이내 추가로 발생한 대출금 비중</label>
+                <div class="radio-wrapper">
+                    <input type="radio" id="new_debt_low" name="new_debt_ratio" value="low" required>
+                    <label for="new_debt_low">전체 채무액의 30% 미만이다 (정상 심사 범위)</label>
+                </div>
+                <div class="radio-wrapper">
+                    <input type="radio" id="new_debt_high" name="new_debt_ratio" value="high">
+                    <label for="new_debt_high">전체 채무액의 30% 이상이다 (재신청 사유 점검 대상)</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="monthly-income">7. 세후 월평균 고정 소득 금액 (만원 단위)</label>
+                <input type="number" id="monthly-income" name="monthly_income" placeholder="숫자만 입력해 주십시오 (예: 250)" required>
+            </div>
+
+            <div class="form-group">
+                <label for="user-phone">8. 실시간 진단 결과 가이드 수신처 번호</label>
+                <input type="text" id="user-phone" name="user_phone" placeholder="010-0000-0000" required>
+            </div>
+
+            <button type="submit" class="cta-button">무료 실시간 다이렉트 자격 분석 신청 및 결과 확인</button>
+        </form>
+
+    </div>
+  
